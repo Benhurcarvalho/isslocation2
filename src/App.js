@@ -36,6 +36,9 @@ class App extends React.Component {
             <li>
               <a target="blank" href="https://icons8.com/icon/30562/longitude">Longitude icon by Icons8</a>
             </li>
+            <li>
+            <a target="blank" href="https://icons8.com/icon/21081/home">Home icon by Icons8</a>
+            </li>
           </ul>
         </footer>
       </>
