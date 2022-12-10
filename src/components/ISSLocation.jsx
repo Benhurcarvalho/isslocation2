@@ -6,11 +6,8 @@ import { connect } from 'react-redux';
 class ISSLocation extends Component {
   render() {
     const { latitude, longitude } = this.props;
-    // const latitude = 0;
-    // const longitude = 0;
     return (
       <main>
-        {/* <img className='ISSimg' src="https://img.icons8.com/external-flat-berkahicon/64/null/external-Satellite-astronomy-flat-berkahicon.png" alt=''/> */}
         <div className='map'>
             <Map
                 // provider={stamenTerrain}
@@ -35,8 +32,24 @@ class ISSLocation extends Component {
                         alt=''
                     />
                 </Overlay>
+
+                <Overlay 
+                    anchor={[-19.8397, -43.8945]} 
+                    offset={[-5, -5]}
+                >
+                    <img
+                        src="https://img.icons8.com/office/40/null/home--v1.png" 
+                        width={40} 
+                        height={40} 
+                        alt=''
+                    />
+                </Overlay>
                 <Marker 
-                anchor={ [latitude,longitude] } />
+                anchor={ [-19.8397, -43.8945] } 
+                />
+                <Marker 
+                anchor={ [latitude,longitude] } 
+                />
             </ Map>
 
         </div>
