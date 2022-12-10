@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Map, Marker } from "pigeon-maps";
+import { Map, Marker, ZoomControl, Overlay } from "pigeon-maps";
+// import { stamenTerrain } from 'pigeon-maps/providers'
 import { connect } from 'react-redux';
 
 class ISSLocation extends Component {
   render() {
-    // const { latitude, longitude } = this.props;
-    const latitude = 0;
-    const longitude = 0;
+    const { latitude, longitude } = this.props;
+    // const latitude = 0;
+    // const longitude = 0;
     return (
       <main>
-        <img className='ISSimg' src="https://img.icons8.com/external-flat-berkahicon/64/null/external-Satellite-astronomy-flat-berkahicon.png" alt=''/>
+        {/* <img className='ISSimg' src="https://img.icons8.com/external-flat-berkahicon/64/null/external-Satellite-astronomy-flat-berkahicon.png" alt=''/> */}
         <div className='map'>
             <Map
+                // provider={stamenTerrain}
+                // dprs={[1, 2]} // this provider supports HiDPI tiles
                 center={ [0,0] }
                 defaultWidth= { 450 }
                 height={ 450 }
@@ -19,8 +22,20 @@ class ISSLocation extends Component {
                 maxZoom={ 50 }
                 zoom={ 1.5 }
             >
+                <ZoomControl />
+                <Overlay 
+                    anchor={[latitude, longitude]} 
+                    offset={[-5, -5]}
+                >
+                    <img
+                        className='ISSimg' 
+                        src="https://img.icons8.com/external-flat-berkahicon/64/null/external-Satellite-astronomy-flat-berkahicon.png" 
+                        width={40} 
+                        height={40} 
+                        alt=''
+                    />
+                </Overlay>
                 <Marker 
-                
                 anchor={ [latitude,longitude] } />
             </ Map>
 

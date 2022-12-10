@@ -10,15 +10,17 @@ class Header extends Component {
     return (
       <div className='header'>
         <h1>Space Station Tracker</h1>
-        <h1>
-            {/* <img src={ latImg } alt='' width='30' />*/}
-            { `Latitude: ${ latitude }`} 
-        </h1>
-        <h1>
-            {' '}
-            {/* <img src={ lonImg } alt="" width='30' />*/}
-            { `Longitude: ${ longitude }`} 
-        </h1>
+        <div className='latLon'>
+            <h1>
+                <img src="https://img.icons8.com/office/40/null/latitude.png" alt='' />
+                { `Latitude: ${ latitude }`} 
+            </h1>
+            <h1>
+                {' '}
+                <img src="https://img.icons8.com/office/40/null/longitude.png" alt="" />
+                { `Longitude: ${ longitude }`} 
+            </h1>
+        </div>
         {
           isLoading && <h3 className='isLoading'>Loading...</h3>
         }
