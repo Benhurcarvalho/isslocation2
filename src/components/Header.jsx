@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import latImg from '../assets/latitude.svg';
-import lonImg from '../assets/longitude.svg';
+// import latImg from '../assets/latitude.svg';
+// import lonImg from '../assets/longitude.svg';
 import { connect } from 'react-redux';
 
 class Header extends Component {
@@ -11,13 +11,13 @@ class Header extends Component {
       <div className='header'>
         <h1>Space Station Tracker</h1>
         <h1>
-            <img src={ latImg } alt='' width='30' />
-            { `Latitude: ${ latitude }`}
+            {/* <img src={ latImg } alt='' width='30' />*/}
+            { `Latitude: ${ latitude }`} 
         </h1>
         <h1>
             {' '}
-            <img src={ lonImg } alt="" width='30' />
-            { `Longitude: ${ longitude }`}
+            {/* <img src={ lonImg } alt="" width='30' />*/}
+            { `Longitude: ${ longitude }`} 
         </h1>
         {
           isLoading && <h3 className='isLoading'>Loading...</h3>
@@ -36,3 +36,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Header);
+
+// export default Header;

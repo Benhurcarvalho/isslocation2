@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import Map, { Marker } from 'pigeon-maps';
+import { Map, Marker } from "pigeon-maps";
 import { connect } from 'react-redux';
 
 class ISSLocation extends Component {
   render() {
-    const { latitude, longitude } = this.props;
+    // const { latitude, longitude } = this.props;
+    const latitude = 0;
+    const longitude = 0;
     return (
       <main>
         <img className='ISSimg' src="https://img.icons8.com/external-flat-berkahicon/64/null/external-Satellite-astronomy-flat-berkahicon.png" alt=''/>
@@ -37,3 +39,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(ISSLocation);
+
+// export default ISSLocation;
