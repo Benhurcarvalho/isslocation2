@@ -32,21 +32,6 @@ class ISSLocation extends Component {
                         alt=''
                     />
                 </Overlay>
-
-                <Overlay 
-                    anchor={[-19.8397, -43.8945]} 
-                    offset={[-5, -5]}
-                >
-                    <img
-                        src="https://img.icons8.com/office/40/null/home--v1.png" 
-                        width={40} 
-                        height={40} 
-                        alt=''
-                    />
-                </Overlay>
-                <Marker 
-                anchor={ [-19.8397, -43.8945] } 
-                />
                 <Marker 
                 anchor={ [latitude,longitude] } 
                 />
